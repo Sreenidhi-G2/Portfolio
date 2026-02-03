@@ -1,0 +1,142 @@
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(30px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes fadeInUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(50px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  50% { 
+    transform: translateY(-20px) rotate(180deg); 
+  }
+}
+
+@keyframes scroll {
+  0% { 
+    opacity: 1; 
+    transform: translateX(-50%) translateY(0); 
+  }
+  100% { 
+    opacity: 0; 
+    transform: translateX(-50%) translateY(20px); 
+  }
+}
+
+@keyframes floatError {
+  0% {
+    transform: translateY(100vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-100px) translateX(50px) rotate(5deg);
+    opacity: 0;
+  }
+}
+
+.floating-element {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #64ffda;
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-element:nth-child(2n) {
+  background: #ff6b6b;
+  animation-delay: -2s;
+}
+
+.floating-element:nth-child(3n) {
+  background: #ffd93d;
+  animation-delay: -4s;
+}
+
+.floating-error {
+  position: absolute;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  backdrop-filter: blur(5px);
+  border: 1px solid transparent;
+  animation: floatError 12s linear infinite;
+  pointer-events: none;
+  white-space: nowrap;
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'Courier New', monospace;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.floating-error:hover {
+  opacity: 1;
+  animation-play-state: paused;
+}
+
+.floating-error-frontend {
+  background: rgba(255, 107, 107, 0.1);
+  color: #ff6b6b;
+  border-color: rgba(255, 107, 107, 0.3);
+}
+
+.floating-error-backend {
+  background: rgba(100, 255, 218, 0.1);
+  color: #64ffda;
+  border-color: rgba(100, 255, 218, 0.3);
+}
+
+.floating-error-general {
+  background: rgba(255, 217, 61, 0.1);
+  color: #ffd93d;
+  border-color: rgba(255, 217, 61, 0.3);
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 1rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .role-tags {
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-element,
+  .floating-error,
+  * {
+    animation: none !important;
+  }
+}
