@@ -39,7 +39,7 @@ const projectData: PortfolioItem[] = [
     category: 'AI/ML',
     type: 'personal',
     github: 'https://github.com/Sreenidhi-G2/Bricky-Chatbot.git',
-    demo: "http://bricky-chatbot.s3-website.ap-south-1.amazonaws.com/"
+    // demo: "http://bricky-chatbot.s3-website.ap-south-1.amazonaws.com/"
   },
   {
     title: 'Connect',
@@ -50,9 +50,9 @@ const projectData: PortfolioItem[] = [
     category: 'Backend',
     type: 'personal',
     github: 'https://github.com/Sreenidhi-G2/Connect-Chat-application-.git',
-    demo: "http://connect-chat-application.s3-website.ap-south-1.amazonaws.com"
+    // demo: "http://connect-chat-application.s3-website.ap-south-1.amazonaws.com"
   },
-  {
+  { 
     title: 'Deepfake Image Detection',
     stack: 'CNN + Django + React',
     description: 'Developed a Deepfake Image Detection System using a custom CNN model achieving ~90% accuracy. Integrated with Django REST APIs and React frontend for real-time inference and visual prediction results.',
@@ -71,7 +71,7 @@ const projectData: PortfolioItem[] = [
     category: 'Backend',
     type: 'personal',
     github: 'https://github.com/Sreenidhi-G2',
-    demo: "https://link-master-eta.vercel.app/"
+    // demo: "https://link-master-eta.vercel.app/"
   },
 
   // Work Experience
